@@ -15,7 +15,7 @@ const Navigation = () => {
                 <Navbar.Offcanvas
                   id={`offcanvasNavbar-expand-${expand}`}
                   aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-                  placement="end"
+                  placement="start"
                 >
                   <Offcanvas.Header closeButton>
                     <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
@@ -24,8 +24,8 @@ const Navigation = () => {
                   </Offcanvas.Header>
                   <Offcanvas.Body>
                     <Nav className="justify-content-end flex-grow-1 pe-3">
-                      <Nav.Link><Link to='/'>Список постов</Link></Nav.Link>
-                      <Nav.Link><Link to='/about'>Обо мне</Link></Nav.Link>
+                      <Link to='/'>Список постов</Link>
+                      <Link to='/about'>Обо мне</Link>
                     </Nav>
                   </Offcanvas.Body>
                 </Navbar.Offcanvas>

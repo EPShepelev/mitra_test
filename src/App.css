@@ -2,8 +2,20 @@
   margin: 0 auto;
   padding: 0 10px;
 }
+
 .postsList {
   margin-bottom: 10px;
 }
 
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.avatarPic {
+  width: 100%;
+}

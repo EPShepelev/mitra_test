@@ -1,28 +1,18 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Button from 'react-bootstrap/Button';
-// import { useDispatch } from 'react-redux';
-// import { getPostsAction } from './redux/actions/actionCreator'
 import Posts from './pages/Posts'
 import About from './pages/About'
-import { BrowserRouter, Routes, Route,  Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Navigation from './components/Navigation';
 
 function App() {
-  // const dispatch = useDispatch()
-
-  // const handleGetPosts = () => {
-  //   dispatch(getPostsAction())
-  // }
 
   return (
     <BrowserRouter >
-    <div className="App">
+    <div className="container">
     <div>
-      <Link to='/'>Список постов</Link>
-      <Link to='/about'>Обо мне</Link>
-      
+      <Navigation />
      </div>
-      {/* <Button variant="primary" onClick={handleGetPosts}> Get Posts </Button> */}
       <Routes>
         <Route path={'/'} element={<Posts />} />
         <Route path={'/about'} element={<About />} />

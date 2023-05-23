@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 
 const PostCard = ({title, text }) => {
   return (
-    <div>
+    <div className='postsList'>
       <Card>
       <Card.Body>
         <Card.Title>{title}</Card.Title>
@@ -14,7 +14,6 @@ const PostCard = ({title, text }) => {
         <Button variant="primary">Комментарии</Button>
       </Card.Body>
     </Card>
-  );
     </div>
   )
 }

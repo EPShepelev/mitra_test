@@ -1,5 +1,9 @@
-.App {
-  text-align: center;
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.postsList {
+  margin-bottom: 10px;
 }
 
 

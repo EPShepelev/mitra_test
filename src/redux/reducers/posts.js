@@ -9,7 +9,7 @@ const postsReducer = (state = initialState, { type, payload }) => {
    switch(type) {
     case SET_POSTS:
         return {
-            ...state, posts: [...state.posts, ...payload],
+            ...state, posts:payload,
         }
     default: return state
    }

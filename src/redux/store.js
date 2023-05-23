@@ -1,4 +1,5 @@
 import { createStore, compose } from "redux";
+import rootReducer from './reducers/index'
 
 const composeEnhancers =
   typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
@@ -8,7 +9,7 @@ const composeEnhancers =
     : compose;
 
     const configureStore = initilState => createStore(
-        reducer,
+        rootReducer,
         initilState,
         composeEnhancers(),
     )

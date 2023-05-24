@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Avatar from './Avatar'
@@ -11,7 +11,9 @@ const PostCard = ({ id, title, text }) => {
   const { comments } = useSelector((store) => store.comments)
   const [isCommentsVisible, setIsCommentsVisible] = useState(false)
 
-  const filtredComments = comments.filter(comment => comment.postId === id)
+  const filtredComments = useMemo(() => {
+    return comments.filter(comment => comment.postId === id)
+  }, [comments, id])
 
   const handleComments = () => {
     setIsCommentsVisible(prev => !prev)

@@ -15,9 +15,9 @@ function App() {
       <Navigation />
      </div>
       <Routes>
-        <Route path={'/'} element={<Posts />} />
-        <Route path={'/about'} element={<About />} />
-        <Route path={'/users/:id'} element={<User />} />
+        <Route path={'/mitra_test'} element={<Posts />} />
+        <Route path={'/mitra_test/about'} element={<About />} />
+        <Route path={'/mitra_test/users/:id'} element={<User />} />
       </Routes>
     </div>
     </BrowserRouter>

@@ -25,12 +25,12 @@ const Navigation = () => {
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Item>
-                  <LinkContainer to="/">
+                  <LinkContainer to="/mitra_test">
                     <Nav.Link>Список постов</Nav.Link>
                   </LinkContainer>
                 </Nav.Item>
                 <Nav.Item>
-                  <LinkContainer to='/about'>
+                  <LinkContainer to='/mitra_test/about'>
                     <Nav.Link>Обо мне</Nav.Link>
                   </LinkContainer>
                 </Nav.Item>

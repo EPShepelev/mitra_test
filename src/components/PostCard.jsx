@@ -5,10 +5,11 @@ import Avatar from './Avatar'
 import { useSelector, useDispatch } from 'react-redux';
 import { GET_COMMENTS } from '../redux/constants'
 import Comment from './Comment';
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-const PostCard = ({ id, title, text, userId }) => {
+const PostCard = ({ id, title, text, userId, avatarDisabled }) => {
   const dispatch = useDispatch()
+  const navigate = useNavigate();
   const { comments } = useSelector((store) => store.comments)
   const [isCommentsVisible, setIsCommentsVisible] = useState(false)
 
@@ -26,9 +27,11 @@ const PostCard = ({ id, title, text, userId }) => {
   return (
     <Card className="mb-2">
       <Card.Body>
-        <Link to={`/users/${userId}`} >
-          <Avatar />
-        </Link>
+        {!avatarDisabled && 
+          <Button className="mb-1" variant="light" onClick={() => navigate(`/mitra_test/users/${userId}`, { state: userId })}> 
+            <Avatar />
+          </Button>
+        }
         <Card.Title>{title}</Card.Title>
         <Card.Text>
           {text}

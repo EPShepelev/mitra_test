@@ -4,6 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom'
+import myAvatar from '../static/my_avatar.jpg'
+import Avatar from '../components/Avatar'
 
 const Navigation = () => {
     return (
@@ -19,7 +21,9 @@ const Navigation = () => {
                 >
                   <Offcanvas.Header closeButton>
                     <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                      ccccc
+                      <Avatar avatar={myAvatar} />
+                      <p>Шепелев Евгений</p>
+                      <p>shepelev.ep@yandex.ru</p>
                     </Offcanvas.Title>
                   </Offcanvas.Header>
                   <Offcanvas.Body>

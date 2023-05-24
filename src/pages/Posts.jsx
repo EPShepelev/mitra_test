@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import PostCard from '../components/PostCard'
-import NoPosts from '../components/NoPosts'
 import { GET_POSTS } from '../redux/constants'
+import NoPosts from '../components/NoPosts';
+import Loader from '../components/Loader';
 
 const Posts = () => {
     const { posts } = useSelector((store) => store.posts)
@@ -11,12 +12,18 @@ const Posts = () => {
     useEffect(() => {
         dispatch({type: GET_POSTS})
       }, [dispatch]);
+    
+    if (!posts) {
+      return (
+        <NoPosts />
+      )
+    }
 
-  return (
-    <div>
-      {posts.length !== 0 ? posts.map(post => <PostCard key={post.id} id={post.id} title={post.title} text={post.body} />) : <NoPosts />}
+    return (
+      <div>
+      {posts.length !== 0 ? posts.map(post => <PostCard key={post.id} id={post.id} title={post.title} text={post.body} />) : <Loader />}
     </div>
-  )
-}
+    )
+  }
 
 export default Posts

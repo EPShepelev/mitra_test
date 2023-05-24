@@ -5,8 +5,8 @@ const Comment = ({email, text}) => {
   return (
     <Card className="mb-1">
         <Card.Body>
-            <Card.Title>{email}</Card.Title>
-            <Card.Text>{text}</Card.Text>
+          <Card.Title>{email}</Card.Title>
+          <Card.Text>{text}</Card.Text>
         </Card.Body>
     </Card>
   )

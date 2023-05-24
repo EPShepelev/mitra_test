@@ -1,11 +1,13 @@
 import React, { useMemo, useEffect } from 'react'
-import Button from 'react-bootstrap/Button';
 import { useNavigate, useLocation } from 'react-router-dom'
-import Card from 'react-bootstrap/Card';
 import { useSelector, useDispatch } from 'react-redux';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
+import { GET_POSTS, GET_USER } from '../redux/constants'
+
 import PostCard from '../components/PostCard'
 import Loader from '../components/Loader';
-import { GET_POSTS, GET_USER } from '../redux/constants'
 
 const User = () => {
   const navigate = useNavigate()

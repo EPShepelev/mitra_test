@@ -3,9 +3,10 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { LinkContainer } from 'react-router-bootstrap'
+
 import myAvatar from '../static/my_avatar.jpg'
 import Avatar from '../components/Avatar'
-import { LinkContainer } from 'react-router-bootstrap'
 
 const Navigation = () => {
   return (

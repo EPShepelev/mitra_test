@@ -23,8 +23,8 @@ const About = () => {
         <ListGroup.Item>Webpack, Gulp</ListGroup.Item>
     </ListGroup>
     <Card.Text className="mt-2">Тут можно посмотреть примеры моего кода:</Card.Text>
-      <Card.Link href="https://github.com/EPShepelev">GitHub</Card.Link>
-      <Card.Link href="https://www.codewars.com/users/EPShepelev">Codewars</Card.Link>
+      <Card.Link href="https://github.com/EPShepelev" target="_blank">GitHub</Card.Link>
+      <Card.Link href="https://www.codewars.com/users/EPShepelev" target="_blank">Codewars</Card.Link>
     </Card.Body>
   </Card>
   )

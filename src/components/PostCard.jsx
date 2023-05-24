@@ -1,11 +1,14 @@
 import React, { useState, useMemo } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Avatar from './Avatar'
-import { useSelector, useDispatch } from 'react-redux';
+
 import { GET_COMMENTS } from '../redux/constants'
+
+import Avatar from './Avatar'
 import Comment from './Comment';
-import { useNavigate } from 'react-router-dom'
+
 
 const PostCard = ({ id, title, text, userId, avatarDisabled }) => {
   const dispatch = useDispatch()

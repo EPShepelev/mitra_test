@@ -1,19 +1,21 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 import Posts from './pages/Posts';
 import About from './pages/About'
 import User from './pages/User'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation';
+
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
   return (
     <BrowserRouter >
     <div className="container">
-    <div>
-      <Navigation />
-     </div>
+      <div>
+        <Navigation />
+      </div>
       <Routes>
         <Route path={'/mitra_test'} element={<Posts />} />
         <Route path={'/mitra_test/about'} element={<About />} />

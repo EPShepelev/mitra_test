@@ -16,7 +16,6 @@ const Posts = () => {
   return (
     <div>
       {posts.length !== 0 ? posts.map(post => <PostCard key={post.id} title={post.title} text={post.body} />) : <NoPosts />}
-      xyz
     </div>
   )
 }

@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import PostCard from '../components/PostCard'
 import NoPosts from '../components/NoPosts'
-import { useDispatch } from 'react-redux';
 import { GET_POSTS } from '../redux/constants'
 
 const Posts = () => {

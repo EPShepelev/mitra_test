@@ -2,20 +2,26 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Avatar from './Avatar'
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { GET_COMMENTS } from '../redux/constants'
+import Comment from './Comment';
 
 const PostCard = ({ id, title, text }) => {
   const dispatch = useDispatch()
+  const { comments } = useSelector((store) => store.comments)
   const [isCommentsVisible, setIsCommentsVisible] = useState(false)
+
+  const filtredComments = comments.filter(comment => comment.postId === id)
 
   const handleComments = () => {
     setIsCommentsVisible(prev => !prev)
-    dispatch({type: GET_COMMENTS, payload: id})
+    if (!isCommentsVisible) {
+      dispatch({type: GET_COMMENTS, payload: id})
+    }
   }
 
   return (
-    <div className='postsList'>
+    <div className="postsList">
       <Card>
       <Card.Body>
         <Avatar />
@@ -24,7 +30,7 @@ const PostCard = ({ id, title, text }) => {
           {text}
         </Card.Text>
         <Button variant="primary" onClick={handleComments}>Комментарии</Button>
-        {!!isCommentsVisible && <div>Комментарии здесь!</div>}
+        {!!isCommentsVisible && filtredComments.map(comment => <Comment email={comment.email} text={comment.body} />)}
       </Card.Body>
     </Card>
     </div>

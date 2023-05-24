@@ -5,8 +5,9 @@ import Avatar from './Avatar'
 import { useSelector, useDispatch } from 'react-redux';
 import { GET_COMMENTS } from '../redux/constants'
 import Comment from './Comment';
+import { Link } from 'react-router-dom'
 
-const PostCard = ({ id, title, text }) => {
+const PostCard = ({ id, title, text, userId }) => {
   const dispatch = useDispatch()
   const { comments } = useSelector((store) => store.comments)
   const [isCommentsVisible, setIsCommentsVisible] = useState(false)
@@ -23,9 +24,11 @@ const PostCard = ({ id, title, text }) => {
   }
 
   return (
-      <Card className="mb-2">
+    <Card className="mb-2">
       <Card.Body>
-        <Avatar />
+        <Link to={`/users/${userId}`} >
+          <Avatar />
+        </Link>
         <Card.Title>{title}</Card.Title>
         <Card.Text>
           {text}

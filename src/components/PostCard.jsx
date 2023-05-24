@@ -21,19 +21,17 @@ const PostCard = ({ id, title, text }) => {
   }
 
   return (
-    <div className="postsList">
-      <Card>
+      <Card className="mb-2">
       <Card.Body>
         <Avatar />
         <Card.Title>{title}</Card.Title>
         <Card.Text>
           {text}
         </Card.Text>
-        <Button variant="primary" onClick={handleComments}>Комментарии</Button>
+        <Button variant="primary" className="mb-1" onClick={handleComments}>Комментарии</Button>
         {!!isCommentsVisible && filtredComments.map(comment => <Comment email={comment.email} text={comment.body} />)}
       </Card.Body>
     </Card>
-    </div>
   )
 }
 

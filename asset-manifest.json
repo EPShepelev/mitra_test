@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mitra_test/static/css/main.ee6438ee.css",
-    "main.js": "/mitra_test/static/js/main.f19569bb.js",
+    "main.js": "/mitra_test/static/js/main.146bdd26.js",
     "static/media/my_avatar.jpg": "/mitra_test/static/media/my_avatar.6a8713df65bad25ebc1a.jpg",
     "static/media/default_avatar.png": "/mitra_test/static/media/default_avatar.bd586afa0458d8d9352c.png",
     "index.html": "/mitra_test/index.html",
     "main.ee6438ee.css.map": "/mitra_test/static/css/main.ee6438ee.css.map",
-    "main.f19569bb.js.map": "/mitra_test/static/js/main.f19569bb.js.map"
+    "main.146bdd26.js.map": "/mitra_test/static/js/main.146bdd26.js.map"
   },
   "entrypoints": [
     "static/css/main.ee6438ee.css",
-    "static/js/main.f19569bb.js"
+    "static/js/main.146bdd26.js"
   ]
 }

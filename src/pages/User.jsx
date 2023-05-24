@@ -21,7 +21,7 @@ const User = () => {
 
   useEffect(() => {
     dispatch({type: GET_USER, payload: +pathname.split('/')[2]})
-  }, [dispatch, pathname]);
+  }, []);
 
   useEffect(() => {
     dispatch({type: GET_POSTS})

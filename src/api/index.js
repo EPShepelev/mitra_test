@@ -11,7 +11,7 @@ export const getPosts = async () => {
 
   export const getComments = async (postId) => {
     try {
-      const response = await axios.get('https://jsonplaceholder.typicode.com/comments?postId=1');
+      const response = await axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`);
       console.log(response)
       return response
     } catch (error) {

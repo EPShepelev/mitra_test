@@ -15,7 +15,7 @@ const Posts = () => {
 
   return (
     <div>
-      {posts.length !== 0 ? posts.map(post => <PostCard key={post.id} title={post.title} text={post.body} />) : <NoPosts />}
+      {posts.length !== 0 ? posts.map(post => <PostCard key={post.id} id={post.id} title={post.title} text={post.body} />) : <NoPosts />}
     </div>
   )
 }

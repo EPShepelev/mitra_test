@@ -5,13 +5,13 @@ import Avatar from './Avatar'
 import { useDispatch } from 'react-redux';
 import { GET_COMMENTS } from '../redux/constants'
 
-const PostCard = ({ title, text }) => {
+const PostCard = ({ id, title, text }) => {
   const dispatch = useDispatch()
   const [isCommentsVisible, setIsCommentsVisible] = useState(false)
 
   const handleComments = () => {
     setIsCommentsVisible(prev => !prev)
-    dispatch({type: GET_COMMENTS})
+    dispatch({type: GET_COMMENTS, payload: id})
   }
 
   return (

@@ -9,8 +9,9 @@ export const setPostsAction = (payload) => ({
     payload
 })
 
-export const getCommentsAction = () => ({
+export const getCommentsAction = (payload) => ({
     type: GET_COMMENTS,
+    payload
 })
 
 export const setCommentsAction = (payload) => ({

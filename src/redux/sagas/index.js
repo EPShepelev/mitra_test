@@ -8,8 +8,8 @@ export function* handlePostsSaga() {
    yield put(setPostsAction(data))
 }
 
-export function* handleCommentsSaga() {
-    const { data } = yield call(getComments)
+export function* handleCommentsSaga({payload}) {
+    const { data } = yield call(getComments, payload)
     yield put(setCommentsAction(data))
  }
 

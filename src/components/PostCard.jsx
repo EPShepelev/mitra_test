@@ -36,9 +36,8 @@ const PostCard = ({ id, title, text, userId, avatarDisabled }) => {
           </Button>
         }
         <Card.Title>{title}</Card.Title>
-        <Card.Text>
-          {text}
-        </Card.Text>
+        {text}
+        <br/>
         <Button variant="primary" className="mb-1" onClick={handleComments}>Комментарии</Button>
         {!!isCommentsVisible && filtredComments.map(comment => <Comment key={comment.id} email={comment.email} text={comment.body} />)}
       </Card.Body>

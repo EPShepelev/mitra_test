@@ -39,11 +39,11 @@ const User = () => {
             <Card.Text>Все посты пользователя {user.username}:</Card.Text> 
           </>
         }
-        <Card.Text>
-          {userPosts.length !== 0 ? userPosts.map(post => <PostCard key={post.id} id={post.id} title={post.title} text={post.body} userId={post.userId} avatarDisabled={true} />) : <Loader />}
-        </Card.Text>
-        <Button variant="primary" className="mb-1" onClick={() => navigate('/mitra_test')}>Назад</Button>
+          <>
+            {userPosts.length !== 0 ? userPosts.map(post => <PostCard key={post.id} id={post.id} title={post.title} text={post.body} userId={post.userId} avatarDisabled={true} />) : <Loader />}
+          </>
       </Card.Body>
+      <Card.Footer className="text-muted"><Button variant="primary" className="mb-1" onClick={() => navigate('/mitra_test')}>Назад</Button></Card.Footer>
     </Card>
   )
 }
